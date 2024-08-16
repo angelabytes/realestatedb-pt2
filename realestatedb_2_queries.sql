@@ -79,13 +79,6 @@ where paa.amenityid = pa.amenityid) > 3;
 
 -- 11. Retrieve all properties that have more bedrooms than the average number of bedrooms and a listing price above the average listing price.
 -- subquery to filter properties based on bedrooms and listing price.
-
-select * 
-from properties p
-where bedrooms > (select avg(bedrooms) from propertydetails pd ) 
-and listingprice > (select avg(ListingPrice) from properties);
-
-
 select *
 from properties p
 where(
